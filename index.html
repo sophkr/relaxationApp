@@ -1,0 +1,36 @@
+    <!DOCTYPE html>
+    <html lang="en" ng-app="Arcade">
+    <head>
+        <title></title>
+
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+        <script src="resources/js/gameapp.js"></script>
+        <script src="resources/js/games.js"></script>
+        <script src="resources/js/youtube.js"></script>
+    </head>
+    <body>
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <div class="login-block" ng-controller="MenuController">
+            <div ng-hide="hidden()">
+            <h1>Enter The Arcade</h1>
+
+            <input type="text" ng-model="username" placeholder="Enter a username">
+            <button ng-disabled="disabled()" ng-click="loginUser()">Login</button>
+            </div>
+            <div  ng-hide="!hidden()">
+            <button id="playGame" ng-disabled="!disabled()" ng-click="playGame()"><img src = "https://cdn4.iconfinder.com/data/icons/game-design-flat-icons-2/512/18_gamepad_console_game_design_flat_icon-256.png" style="height:50px;width:50px;"> Play Pong </button>
+
+
+
+            <button id="watchCat" ng-disabled="!disabled()" ng-click="watchCat()"><img src = "http://www.screenulator.com/static_images/youtube_icon.png" style="height:60px;width:50px;"> Explore Videos </button>
+
+           <button id="logOut" ng-disabled="!disabled()" ng-click="logOut()"><img src = "http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-11/128/logout-icon.png" style="height:50px;width:50px;"> Logout </button>
+                </div>
+        </div>
+        <div id="special-content">
+        </div>
+    </body>
+    </html>
+
